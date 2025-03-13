@@ -34,6 +34,9 @@ def croix():
 def changer_couleur():
     global couleur
     couleur = simpledialog.askstring("Couleur", "Entrez une couleur:")
+
+def fermer_fenetre():
+    fenetre.destroy()
     
 
 bouton = tk.Button(fenetre, text="Cercle", command=disque)    
@@ -48,6 +51,7 @@ bouton.grid(row=3, column=0)
 bouton = tk.Button(fenetre, text="Couleur", command=changer_couleur)
 bouton.grid(row=0, column=1)
 
-
+bouton= tk.Button(fenetre, text="Fermer", command=fermer_fenetre)
+bouton.grid(row=0, column=2)
 
 fenetre.mainloop()
